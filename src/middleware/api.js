@@ -19,7 +19,11 @@ let api = {
         return{
             postNote: () => fetch(url,{
                 method: 'POST',
-                body: body
+                body: body,
+                headers: {
+                        'Accept': 'application/json, text/plain, */*',
+                        'Content-Type': 'application/json'
+                        }
             }).then((res) => {
                 if(res.status === 401){
                     return Promise.reject(new Error("Status 401"));

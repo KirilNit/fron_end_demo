@@ -16,7 +16,8 @@ class Notes extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            notes:[]
+            notes:[],
+            form:{'name':'Some Name', 'note':'143'}
         };
     };
 
@@ -30,10 +31,43 @@ class Notes extends Component{
 
     };
 
+    fillForm = (e) => {
+        console.log('changeValue');
+        e.stopPropagation();
+        let tempform = Object.assign({},this.state.form);
+
+        tempform[e.target.name]=e.target.value;
+        this.setState({form:tempform});
+        console.log(this.state.form)
+    };
+
+    sendNote = () => {
+        let payload = JSON.stringify(this.state.form);
+        api.post('http://127.0.0.1:5000/postnotes', payload).postNote()
+            .then(resp => {
+                console.log(resp);
+                this.getNotes()
+            })
+            .catch(err=>{console.log(err)})
+    };
+
     render(){
         return(
             <div className={'rooted'}>
                 <p>This is Notes Page</p>
+                <div>
+                    <input
+                        type={'name'}
+                        name={'name'}
+                        onChange={e=>this.fillForm(e)}
+                    />
+                    <input
+                        type={'note'}
+                        name={'note'}
+                        onChange={e=>this.fillForm(e)}
+                    />
+                    <button onClick={()=>this.sendNote()}>Save Note</button>
+                </div>
                 <div>{this.state.notes.map(
                     (item, index) => {
                         return(
