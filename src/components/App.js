@@ -33,7 +33,7 @@ class App extends Component {
 
     render(){
         return (
-            <div className={appStyles.app}>
+            <div className={appStyles.app} style={{textAlign:'center'}}>
                 <div>
                     <div className={appStyles.mainDiv}>
                         <span id={'navHome'} onClick={()=>this.handleNavigation('home')}>Home</span>
