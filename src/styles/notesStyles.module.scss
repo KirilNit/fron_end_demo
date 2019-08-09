@@ -1,0 +1,10 @@
+@import "Variables";
+
+.contentNotes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .childs{
+    margin-right: 3px;
+  }
+}

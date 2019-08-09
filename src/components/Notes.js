@@ -1,6 +1,13 @@
 import React, {Component} from 'react'
 import {withStyles} from "@material-ui/core";
 import api from "../middleware/api"
+import universalContent from "../styles/universalContent.module.scss"
+import { makeStyles } from '@material-ui/core/styles';
+import MenuItem from '@material-ui/core/MenuItem';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import notesStyles from "../styles/notesStyles.module.scss"
+
 
 
 const styles = theme => (
@@ -54,19 +61,29 @@ class Notes extends Component{
     render(){
         return(
             <div className={'rooted'}>
-                <p>This is Notes Page</p>
-                <div>
-                    <input
+                <p className={universalContent.headerContent}>This is Notes Page</p>
+                <div className={notesStyles.contentNotes}>
+                    <TextField
+                        className={notesStyles.childs}
                         type={'name'}
                         name={'name'}
+                        label={'Name'}
+                        variant="outlined"
+                        margin="normal"
                         onChange={e=>this.fillForm(e)}
                     />
-                    <input
+                    <TextField
+                        className={notesStyles.childs}
+                        variant="outlined"
+                        label={'Note'}
                         type={'note'}
                         name={'note'}
+                        margin="normal"
                         onChange={e=>this.fillForm(e)}
                     />
-                    <button onClick={()=>this.sendNote()}>Save Note</button>
+                    <Button
+                        className={notesStyles.childs}
+                        onClick={()=>this.sendNote()}>Save Note</Button>
                 </div>
                 <div>{this.state.notes.map(
                     (item, index) => {

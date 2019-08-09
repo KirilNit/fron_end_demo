@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {withStyles} from "@material-ui/core";
+import universalContent from "../styles/universalContent.module.scss"
 
 
 const styles = theme => (
@@ -21,7 +22,7 @@ class Home extends Component{
     render(){
         return(
             <div className={'rooted'}>
-                <p>This is my demo UI for my `fullstack` project. Don't bother Yourself with detailed revision of this UI =)</p>
+                <p className={universalContent.headerContent}>This is my demo UI for my `fullstack` project. Don't bother Yourself with detailed revision of this UI =)</p>
             </div>
         )
     }

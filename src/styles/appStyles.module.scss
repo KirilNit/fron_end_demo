@@ -1,0 +1,22 @@
+@import "Variables";
+
+.mainDiv{
+  background: $color-bg-darck;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+}
+.textNavigation{
+  color: $color-text-grey;
+  cursor: pointer;
+  margin-right: 10px;
+  font-family: $fontFamily-header;
+  font-size: 20px;
+}
+//navigaionHeader{
+//  display: flex;
+//}
+.app{
+  text-align: center;
+}
