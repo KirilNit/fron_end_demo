@@ -14,9 +14,21 @@
   font-family: $fontFamily-header;
   font-size: 20px;
 }
-//navigaionHeader{
-//  display: flex;
-//}
+.hoveredNavigation:hover{
+    //padding: 3px;
+    border-radius: 3px;
+    background: $color-navigationDarkSecond;
+  }
 .app{
+  height: 100%;
   text-align: center;
+}
+.contentWrapper{
+  height: calc(100% - 48px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .innerContentWrapper{
+    width: 80%;
+  }
 }

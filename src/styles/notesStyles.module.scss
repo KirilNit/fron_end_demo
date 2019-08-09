@@ -8,3 +8,161 @@
     margin-right: 3px;
   }
 }
+.notesContentWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.chartsWrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.generalNotesWrapper{
+  display: flex;
+  flex-flow: column;
+  width: 80%;
+  height: 100%;
+}
+.notesBlock{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: calc(100% - 46px);
+  font-family: $fontFamily-custom;
+}
+.notesPrevItems{
+  margin: 2px;
+  .namePrevFont{
+    font-style: oblique;
+  }
+}
+.notesHeader{
+  display: flex;
+  align-items: flex-start;
+  flex-basis: 10%;
+  flex-grow: 1;
+  .childHeader{
+    align-self: center;
+    margin-right: 3px;
+  }
+}
+.notesBlock > * {
+  padding: 10px;
+}
+
+.notesListWrapper{
+  //display: inline-block;
+  //width: 30%;
+  margin-right: 20px;
+  overflow-y: auto;
+  height: 100%;
+  flex: 1 10%;
+  //background-color: $color-SurfaceNotesList;
+}
+.bgNotesList{
+  background-color: $color-SurfaceNotesList;
+}
+.noteBody{
+  width: 60%;
+  align-self: stretch;
+  flex: 1 40%;
+  .noteBodyText{
+    margin-top: 10px;
+  }
+}
+.notePrev{
+  //border-bottom: solid 1px;
+  margin: 7px;
+  cursor: pointer;
+  padding: 3px;
+  border-bottom: solid 1px darkgray;
+  border-top: solid 1px darkgray;
+  border-radius: 3px;
+}
+.addNoteStyles{
+  width: 10%;
+  margin: 15px;
+  align-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.inputWrapper{
+  width: 70%;
+  margin: 0 auto;
+  height: 80%;
+  //background-color: #b00020;
+  //display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 0px 40px;
+  overflow: auto;
+
+}
+.wrapper{
+  width: 100%;
+  height: 100%;
+  background-color:  #07070766;
+  padding-top: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 200;
+
+}
+.onHover:hover{
+  background-color: $color-SurfaceNotesList;
+  border-radius: 3px;
+  padding: 3px;
+  margin: 7px;
+}
+.onClicked{
+  border-radius: 3px;
+  padding: 3px;
+  background-color: $color-SurfaceNotesList;
+  margin: 7px;
+}
+.mainHeader{
+  width: 100%;
+  font-weight: 300;
+  font-size: 24px;
+  margin: 15px 0 15px 0;
+  padding: 10px;
+  border-bottom: 1px solid #dae1e8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.inputContentWrapper{
+  float: left;
+  width: 70%;
+  height: 80%;
+  flex-grow: 1;
+  padding: 0 10px;
+  & .innerContent{
+    background-color: #F9F9F9;
+    padding: 20px;
+    overflow-y: auto;
+  }
+}
+
+.buttonContainer{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.inputNativeWrapper{
+  display: flex;
+  flex-flow: column;
+  height: 80%;
+}

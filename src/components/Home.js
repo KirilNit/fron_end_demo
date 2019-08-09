@@ -22,7 +22,8 @@ class Home extends Component{
     render(){
         return(
             <div className={'rooted'}>
-                <p className={universalContent.headerContent}>This is my demo UI for my `fullstack` project. Don't bother Yourself with detailed revision of this UI =)</p>
+                <div className={universalContent.headerContent}>This is my demo UI for my `fullstack` project.
+                    Don't bother Yourself with detailed revision of this UI =)</div>
             </div>
         )
     }

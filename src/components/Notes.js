@@ -7,16 +7,10 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import notesStyles from "../styles/notesStyles.module.scss"
+import IconButton from "@material-ui/core/IconButton/IconButton";
+import Close from "@material-ui/core/SvgIcon/SvgIcon";
 
 
-
-const styles = theme => (
-    {
-        rooted:{
-            position:'absolute'
-        }
-    }
-);
 
 
 class Notes extends Component{
@@ -24,7 +18,8 @@ class Notes extends Component{
         super(props);
         this.state = {
             notes:[],
-            form:{'name':'Some Name', 'note':'143'}
+            form:{'name':'', 'note':''},
+            addNote: false
         };
     };
 
@@ -53,38 +48,116 @@ class Notes extends Component{
         api.post('http://127.0.0.1:5000/postnotes', payload).postNote()
             .then(resp => {
                 console.log(resp);
-                this.getNotes()
+                this.getNotes();
+                this.setState({addNote:false})
             })
             .catch(err=>{console.log(err)})
     };
 
+    handleAddNote = () => {
+        this.setState({addNote:true});
+        console.log("Add Note now is " + this.state.addNote)
+    };
+
+    renderAddNote(){
+        const disabled = this.state.form['name'] === '' || this.state.form['note']==='';
+        return(
+            this.state.addNote &&
+                <div className={notesStyles.wrapper}>
+                    <div className={notesStyles.inputWrapper}>
+                        <div className={notesStyles.mainHeader}>
+                            {this.state.edit ? <p>Edit Note: {this.state.activeCard.name}</p> : <p>Add New Note</p>}
+                            <IconButton aria-label="Delete"  onClick={()=>this.exit()}>
+                                <Close fontSize="small"/>
+                            </IconButton>
+                        </div>
+                        <div className={notesStyles.inputContentWrapper}>
+                            {(!this.state.edit ?
+                                <div className={notesStyles.inputNativeWrapper}>
+                                    <form name={'name'}>
+                                        <TextField
+                                            className={notesStyles.childs}
+                                            type={'name'}
+                                            name={'name'}
+                                            label={'Name'}
+                                            variant="outlined"
+                                            margin="normal"
+                                            onChange={e=>this.fillForm(e)}
+                                        />
+                                    </form>
+                                    <form name={'name'} typeof={'text'}>
+                                        <TextField
+                                            className={notesStyles.childs}
+                                            variant="outlined"
+                                            label={'Note'}
+                                            type={'note'}
+                                            name={'note'}
+                                            margin="normal"
+                                            onChange={e=>this.fillForm(e)}
+                                        />
+                                    </form>
+                                </div>
+                                :
+                                <div className={notesStyles.inputNativeWrapper}>
+                                    <form name={'name'}>
+                                        <TextField
+                                            className={notesStyles.childs}
+                                            type={'name'}
+                                            name={'name'}
+                                            label={'Name'}
+                                            variant="outlined"
+                                            margin="normal"
+                                            onChange={e=>this.fillForm(e)}
+                                        />
+                                    </form>
+                                    <form name={'name'} typeof={'text'}>
+                                        <TextField
+                                            className={notesStyles.childs}
+                                            variant="outlined"
+                                            label={'Note'}
+                                            type={'note'}
+                                            name={'note'}
+                                            margin="normal"
+                                            onChange={e=>this.fillForm(e)}
+                                        />
+                                    </form>
+                                </div>)}
+                        <div className={notesStyles.buttonContainer}>
+
+                            {(!disabled && <Button
+                                className={notesStyles.childs}
+                                onClick={() => this.sendNote()}
+                            >Save Note</Button>)}
+                            {(
+                                disabled
+                                &&
+                                <Button
+                                className={notesStyles.childs}
+                                onClick={() => this.sendNote()}
+                                disabled
+                            >Save Note</Button>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        )
+
+    }
+
+
     render(){
         return(
-            <div className={'rooted'}>
-                <p className={universalContent.headerContent}>This is Notes Page</p>
+            <div className={notesStyles.notesContentWrapper}>
+                <div className={universalContent.headerContent}>This is Notes Page</div>
                 <div className={notesStyles.contentNotes}>
-                    <TextField
-                        className={notesStyles.childs}
-                        type={'name'}
-                        name={'name'}
-                        label={'Name'}
-                        variant="outlined"
-                        margin="normal"
-                        onChange={e=>this.fillForm(e)}
-                    />
-                    <TextField
-                        className={notesStyles.childs}
-                        variant="outlined"
-                        label={'Note'}
-                        type={'note'}
-                        name={'note'}
-                        margin="normal"
-                        onChange={e=>this.fillForm(e)}
-                    />
                     <Button
-                        className={notesStyles.childs}
-                        onClick={()=>this.sendNote()}>Save Note</Button>
+                            className={notesStyles.childs}
+                            onClick={() => this.handleAddNote()}
+                        >Add Note</Button>
                 </div>
+                {this.renderAddNote()}
                 <div>{this.state.notes.map(
                     (item, index) => {
                         return(
@@ -107,4 +180,4 @@ class Notes extends Component{
     }
 }
 
-export default withStyles(styles) (Notes);
+export default withStyles(universalContent) (Notes);
