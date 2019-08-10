@@ -38,9 +38,9 @@ class App extends Component {
         return (
             <div className={appStyles.app}>
                 <div className={appStyles.mainDiv}>
-                    <span id={'navHome'} onClick={()=>this.handleNavigation('home')} className={appStyles.textNavigation + ' '
+                    <span id={'nav-home'} onClick={()=>this.handleNavigation('home')} className={appStyles.textNavigation + ' '
                     + appStyles.hoveredNavigation}>Home</span>
-                    <span id={'navNotes'} onClick={()=>this.handleNavigation('notes')} className={appStyles.textNavigation + ' '
+                    <span id={'nav-notes'} onClick={()=>this.handleNavigation('notes')} className={appStyles.textNavigation + ' '
                     + appStyles.hoveredNavigation}>Notes</span>
                 </div>
                 <div className={appStyles.contentWrapper}>

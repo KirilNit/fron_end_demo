@@ -161,11 +161,11 @@ class Notes extends Component{
                 <div>{this.state.notes.map(
                     (item, index) => {
                         return(
-                            <div key={index}>
+                            <div key={item.id}>
                                 {Object.keys(item).map(
                                     (itemInner, index) => {
                                         return (
-                                            <div key={index}>
+                                            <div key={index} id={item.name}>
                                                 <p>{itemInner}: {item[itemInner]}</p>
                                             </div>
                                         )
