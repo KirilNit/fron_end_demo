@@ -66,7 +66,10 @@ class Notes extends Component{
                 <div className={notesStyles.wrapper}>
                     <div className={notesStyles.inputWrapper}>
                         <div className={notesStyles.mainHeader}>
-                            {this.state.edit ? <p>Edit Note: {this.state.activeCard.name}</p> : <p>Add New Note</p>}
+                            {this.state.edit ?
+                                <p>Edit Note: {this.state.activeCard.name}</p>
+                                :
+                                <p id={'add-notes-modal-header'}>Add New Note</p>}
                             <IconButton aria-label="Delete"  onClick={()=>this.exit()}>
                                 <Close fontSize="small"/>
                             </IconButton>
@@ -127,6 +130,7 @@ class Notes extends Component{
                             {(!disabled && <Button
                                 className={notesStyles.childs}
                                 onClick={() => this.sendNote()}
+                                id={'save-modal'}
                             >Save Note</Button>)}
                             {(
                                 disabled
@@ -135,6 +139,7 @@ class Notes extends Component{
                                 className={notesStyles.childs}
                                 onClick={() => this.sendNote()}
                                 disabled
+                                id={'save-modal'}
                             >Save Note</Button>
                             )}
                         </div>
@@ -150,11 +155,16 @@ class Notes extends Component{
     render(){
         return(
             <div className={notesStyles.notesContentWrapper}>
-                <div className={universalContent.headerContent}>This is Notes Page</div>
+                <div className={universalContent.headerContent}>
+                    <p id={'notes-logo'}>
+                        This is Notes Page
+                    </p>
+                </div>
                 <div className={notesStyles.contentNotes}>
                     <Button
                             className={notesStyles.childs}
                             onClick={() => this.handleAddNote()}
+                            id={'add-notes-button'}
                         >Add Note</Button>
                 </div>
                 {this.renderAddNote()}

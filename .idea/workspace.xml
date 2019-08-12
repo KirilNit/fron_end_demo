@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="474266ab-d51e-4f5c-b187-09cdc7fe0da3" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.htpasswd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/demo_ui.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +19,7 @@
     <session id="1817679648">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.5" value="1" />
@@ -73,10 +71,10 @@
           <entry key="Dockerfile" value="195" />
           <entry key="conf" value="26" />
           <entry key="css" value="35" />
-          <entry key="js" value="2842" />
+          <entry key="js" value="2949" />
           <entry key="json" value="3" />
           <entry key="scss" value="586" />
-          <entry key="txt" value="119" />
+          <entry key="txt" value="122" />
           <entry key="yaml" value="5" />
         </counts>
       </usages-collector>
@@ -85,8 +83,8 @@
           <entry key="CSS" value="35" />
           <entry key="Dockerfile" value="195" />
           <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="2842" />
-          <entry key="PLAIN_TEXT" value="145" />
+          <entry key="JavaScript" value="2949" />
+          <entry key="PLAIN_TEXT" value="148" />
           <entry key="SCSS" value="586" />
           <entry key="YAML" value="5" />
         </counts>
@@ -95,10 +93,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
+            <state relative-caret-position="615">
               <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -110,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+            <state relative-caret-position="390">
+              <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -146,11 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Notes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="182" column="15" selection-start-line="182" selection-start-column="15" selection-end-line="182" selection-end-column="15" />
+            <state relative-caret-position="369">
+              <caret line="141" column="49" selection-start-line="141" selection-start-column="49" selection-end-line="141" selection-end-column="49" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -208,12 +206,12 @@
         <option value="$PROJECT_DIR$/src/styles/newSass.sass" />
         <option value="$PROJECT_DIR$/src/styles/newTwo.module.scss" />
         <option value="$PROJECT_DIR$/src/styles/universalContent.module.scss" />
-        <option value="$PROJECT_DIR$/src/components/Home.js" />
         <option value="$PROJECT_DIR$/src/styles/appStyles.module.scss" />
         <option value="$PROJECT_DIR$/src/styles/Variables.scss" />
         <option value="$PROJECT_DIR$/src/styles/notesStyles.module.scss" />
-        <option value="$PROJECT_DIR$/src/components/Notes.js" />
         <option value="$PROJECT_DIR$/src/components/App.js" />
+        <option value="$PROJECT_DIR$/src/components/Home.js" />
+        <option value="$PROJECT_DIR$/src/components/Notes.js" />
       </list>
     </option>
   </component>
@@ -235,7 +233,7 @@
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="height" value="1007" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -366,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565384259798</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ids">
+      <created>1565465933318</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1565465933318</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -408,7 +413,8 @@
     <MESSAGE value="add POST notes to UI view" />
     <MESSAGE value="add styles, dockerfile" />
     <MESSAGE value="add modal view to Add Note" />
-    <option name="LAST_COMMIT_MESSAGE" value="add modal view to Add Note" />
+    <MESSAGE value="ids" />
+    <option name="LAST_COMMIT_MESSAGE" value="ids" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/node-sass/vendor/darwin-x64-67/binding.node" />
@@ -554,10 +560,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        <state relative-caret-position="390">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -566,20 +582,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Notes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="182" column="15" selection-start-line="182" selection-start-column="15" selection-end-line="182" selection-end-column="15" />
+        <state relative-caret-position="369">
+          <caret line="141" column="49" selection-start-line="141" selection-start-column="49" selection-end-line="141" selection-end-column="49" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
